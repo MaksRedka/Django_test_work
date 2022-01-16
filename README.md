@@ -1,2 +1,2 @@
 # Django_test_work
-Heroku deploy - https://secure-mesa-73558.herokuapp.com
+Google Cloud Platform - 34.118.81.70:8000
