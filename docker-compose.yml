@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .\mysite:/Django_test_work
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+  
+  db:
+    container_name: db
+    image: postgres
+    expose:
+      - 5432
+    environment:
+      POSTGRES_PASSWORD: password

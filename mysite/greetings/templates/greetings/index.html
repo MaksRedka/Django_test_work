@@ -1,0 +1,14 @@
+{% extends 'greetings/base.html' %}
+
+{% block content %}
+    <div class="content">
+        <p>Enter you email:</p>
+        <form action="/submit/" method="POST">{% csrf_token %}
+            <input id="input_text" type="email" name="email" size="25" placeholder=" max6156@gmail.com">
+            <div class="buttons">
+                <input id="submit_button" type="submit" value="Submit">
+                <a id="show_greetings" href="/greeting_list">Greetings</a>
+            </div>
+        </form>
+    </div>
+{% endblock  %}
